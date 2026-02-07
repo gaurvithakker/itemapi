@@ -16,6 +16,11 @@ public class ItemController {
         this.itemService = itemService;
     }
 
+    @GetMapping("/")
+    public String home() {
+        return "Item API is running successfully!";
+    }
+
     @PostMapping
     public ResponseEntity<Item> addItem(@Valid @RequestBody Item item) {
         return ResponseEntity.ok(itemService.addItem(item));
