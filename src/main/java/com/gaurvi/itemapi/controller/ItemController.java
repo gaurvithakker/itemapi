@@ -16,7 +16,7 @@ public class ItemController {
         this.itemService = itemService;
     }
 
-    @GetMapping("/")
+    @GetMapping
     public String home() {
         return "Item API is running successfully!";
     }
